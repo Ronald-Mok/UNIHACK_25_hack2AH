@@ -1,0 +1,40 @@
+<div class="dashboard-container">
+  <h2>Welcome, {{ user?.name || 'Guest' }}!</h2>
+  <p>Email: {{ user?.email }}</p>
+  <img [src]="user?.picture" alt="Profile Picture" class="profile-pic" />
+
+
+  <button class="auth-button" (click)="authService.logout()">
+    🚪 Logout
+  </button>
+
+  <h3>📩 Analyzed Emails</h3>
+
+  <div *ngIf="analyzedEmails.length > 0; else noEmails">
+    <table class="email-table">
+      <thead>
+        <tr>
+          <th>📌 Subject</th>
+          <th>📂 Category</th>
+          <th>📊 Spam Score</th>
+          <th>🗑️ Should Delete?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let email of analyzedEmails">
+          <td>{{ email.subject }}</td>
+          <td>{{ email.category }}</td>
+          <td>{{ email.spam_score }}%</td>
+          <td [ngClass]="{ 'danger': email.should_delete === 'yes' }">
+            {{ email.should_delete === 'yes' ? '🚨 Yes' : '✅ No' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <ng-template #noEmails>
+    <p>⚠️ No analyzed emails found.</p>
+  </ng-template>
+</div>

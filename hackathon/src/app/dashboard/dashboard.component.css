@@ -1,0 +1,50 @@
+.dashboard-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .auth-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .auth-button:hover {
+    background-color: darkred;
+  }
+  
+  .email-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .email-table th, .email-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .email-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .danger {
+    background-color: #ffcccc; 
+    color: red;
+    font-weight: bold;
+  }

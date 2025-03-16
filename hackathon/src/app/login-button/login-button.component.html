@@ -1,0 +1,7 @@
+<button class="auth-button" (click)="handleAuth()">
+  <span *ngIf="isLoggedIn; else loginText">🚪 Logout</span>
+  <ng-template #loginText>
+    <img src="assets/google-icon.svg" alt="Google Logo" class="google-icon" />
+    Login with Google
+  </ng-template>
+</button>
