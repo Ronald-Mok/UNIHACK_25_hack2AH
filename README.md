@@ -69,3 +69,6 @@ For significant changes, please open an issue first to discuss your ideas.
 **Reminder:** When setting up and running Spamurai, please ensure you use your own OpenAI token and Google API token.
 
 Welcome to a future where your inbox is a sanctuary, protected by the vigilant spirit of Spamurai. Enjoy!
+
+Devpost link:
+https://devpost.com/software/undecided-qe38z1#updates
